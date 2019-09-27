@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        var aux = 0
+        var colors = [
+            "linear-gradient(90deg, #FF7700, #CF0000)",
+            "linear-gradient(90deg, #4BC6EF, #6F8CD6)",
+            "linear-gradient(90deg, #02C97D, #009261)",
+            "linear-gradient(90deg, #E0BE00, #EB9500)",
+            "linear-gradient(90deg, #B723C4, #8B04D4)",
+        ]
+        function imagem(i) {
+            document.getElementById('img').src = "Camaleão" + i + ".png"
+            document.getElementById(aux).style.backgroundImage = "linear-gradient(180deg, #eee, #eee)"
+            document.getElementById(aux).style.color = "#333"
+            document.getElementById(i).style.backgroundImage = colors[i]
+            document.getElementById(i).style.color = "white"
+            aux = i
+        }
+    </script>
+</head>
+
+<body>
+    <div class="front">
+        <img id="img" src="Camaleão.png">
+        <div class="buttons">
+            <button id="0" onclick="imagem('0')">"@#$!%&*"</button>
+            <button id="1" onclick="imagem('1')">"Paz e amor, brother"</button>
+            <button id="2" onclick="imagem('2')">"Vai da certo"</button>
+            <button id="3" onclick="imagem('3')">"Eu sou riicaaa"</button>
+            <button id="4" onclick="imagem('4')">"Abra cadabra"</button>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    .buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    button {
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+        border: 0;
+        box-shadow: 1px 1px 5px #00000033;
+        color: #333;
+        font-family: "Trebuchet MS";
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background-color: #ddd;
+    }
+
+    .front {
+        background-color: white;
+        margin-left: 20px;
+        margin-top: 20px;
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+        border-radius: 15px;
+        align-content: center;
+        position: relative;
+    }
+
+    img {
+        position: relative;
+        display: flex;
+        width: 400px;
+        height: auto;
+        margin-left: calc(50% - 200px);
+        margin-top: 100px;
+    }
+</style>
